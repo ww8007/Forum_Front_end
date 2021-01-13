@@ -6,6 +6,7 @@ function App() {
       <div className="header">
         <div className="logo">
           <a href="#">시크릿쥬쥬</a>
+          <span>a</span>
         </div>
       </div>
     </header>

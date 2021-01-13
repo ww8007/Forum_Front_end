@@ -1,4 +1,5 @@
 {
     "compile-hero.disable-compile-files-on-did-save-code": false,
-    "liveServer.settings.multiRootWorkspaceName": "Forum_Front_end"
+    "liveServer.settings.multiRootWorkspaceName": "Forum_Front_end",
+    "liveServer.settings.port": 5501
 }
