@@ -1,20 +1,48 @@
 @import-normalize;
 
+div {
+  border: solid 1px black;
+}
+body {
+  background-color: #439ab8;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
 .header {
-  height: 80px;
-  background-color: tomato;
-  color: black;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
+  height: 15vh;
+  background-color: #196e8b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
 }
 
 .logo {
-  font-size: 30px;
+  margin-left: 50px;
+  font-size: 40px;
 }
 
-.main-menu {
+.menu {
+  margin-right: 50px;
+  height: 15vh;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topMenu {
+  margin-left: 180px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainMenu {
+  margin-bottom: 6vh;
+  font-size: 20px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
 }
