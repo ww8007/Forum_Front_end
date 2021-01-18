@@ -1,9 +1,8 @@
 import axios from 'axios';
-import { response } from 'express';
 
-// axios 인스턴스 생성 -> 주소 바뀌더라도 쉽게 수정 가능
+// axios 인스턴스 생성
 
-const client = axios.create;
+const client = axios.create();
 
 // 글로벌 설정
 
