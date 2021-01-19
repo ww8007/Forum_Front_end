@@ -36,11 +36,6 @@ export const register = createAction(
   }),
 );
 
-export const register = createAction(REGISTER, ({ username, password }) => ({
-  username,
-  password,
-}));
-
 export const login = createAction(LOGIN, ({ username, password }) => ({
   username,
   password,
@@ -59,7 +54,6 @@ const initialState = {
     username: '',
 
     email: '',
-
 
     password: '',
     passwordConfirm: '',
