@@ -3,7 +3,9 @@ import { createAction, handleActions } from 'redux-actions';
 const START_LOADING = 'loading/START_LOADING';
 const FINISH_LOADING = 'loading/FINISH_LOADING';
 
-// 요청을 위한 액션 타입 payload로 정의
+/*
+ 요청을 위한 액션 타입을 payload로 설정합니다 (예: "sample/GET_POST")
+*/
 
 export const startLoading = createAction(
   START_LOADING,
@@ -15,7 +17,6 @@ export const finishLoading = createAction(
   (requestType) => requestType,
 );
 
-// 최초 상태 없으니 빈 객체로 선언
 const initialState = {};
 
 const loading = handleActions(
