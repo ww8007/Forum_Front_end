@@ -7,8 +7,11 @@ const client = axios.create();
 // 글로벌 설정
 
 // // API 주소 다른 곳 사용
-// client.defaults.baseURL = '주소';
-
+client.defaults.baseURL =
+  'http://djangocrudboard-env-2.eba-pncegi8j.ap-northeast-2.elasticbeanstalk.com/';
+client.defaults.headers = {
+  'content-type': 'application/x-www-form-urlencoded',
+};
 // //header
 // client.defaults.headers.common['Authorization'] = '주소';
 
