@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { changeField, initializeForm, login } from '../../modules/auth';
 import AuthForm from '../../components/auth/AuthForm';
-import { check } from '../../modules/user';
+// import { check } from '../../modules/user';
 
 const LoginForm = ({ history }) => {
   const [error, setError] = useState(null);
@@ -47,9 +47,10 @@ const LoginForm = ({ history }) => {
     }
     if (auth) {
       console.log('로그인 성공');
-      dispatch(check());
+      // dispatch(check());
+      history.push('/'); // 홈으로 이동
     }
-  }, [auth, authError, dispatch]);
+  }, [auth, authError]);
 
   useEffect(() => {
     if (user) {
