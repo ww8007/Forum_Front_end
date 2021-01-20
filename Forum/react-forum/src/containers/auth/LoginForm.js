@@ -50,7 +50,7 @@ const LoginForm = ({ history }) => {
       // dispatch(check());
       history.push('/'); // 홈으로 이동
     }
-  }, [auth, authError]);
+  }, [auth, authError, history]);
 
   useEffect(() => {
     if (user) {
