@@ -1,30 +1,58 @@
-import axios from 'axios';
+// import axios from 'axios';
 
-// axios 인스턴스 생성
+// // axios 인스턴스 생성
+
+// const client = axios.create();
+
+// // 글로벌 설정
+
+// // // API 주소 다른 곳 사용
+// client.defaults.baseURL =
+//   'http://djangocrudboard-env-2.eba-pncegi8j.ap-northeast-2.elasticbeanstalk.com/';
+// client.defaults.headers = {
+//   'content-type': 'application/x-www-form-urlencoded',
+// };
+// // //header
+// // client.defaults.headers.common['Authorization'] = '주소';
+
+// // //인터셉터
+// // axios.intercepter.response.use(
+// //     response => {
+// //         //요청 성공시 특정 작업
+// //         return response;
+// //     },
+// //     error => {
+// //         //요청 실패 시 특정 작업
+// //         return Promise.reject(error);
+// //     }
+// // )
+
+// export default client;
+
+import axios from 'axios';
 
 const client = axios.create();
 
-// 글로벌 설정
+/*
+  글로벌 설정 예시:
+  
+  // API 주소를 다른 곳으로 사용함
+  client.defaults.baseURL = 'https://external-api-server.com/' 
 
-// // API 주소 다른 곳 사용
-client.defaults.baseURL =
-  'http://djangocrudboard-env-2.eba-pncegi8j.ap-northeast-2.elasticbeanstalk.com/';
-client.defaults.headers = {
-  'content-type': 'application/x-www-form-urlencoded',
-};
-// //header
-// client.defaults.headers.common['Authorization'] = '주소';
+  // 헤더 설정
+  client.defaults.headers.common['Authorization'] = 'Bearer a1b2c3d4';
 
-// //인터셉터
-// axios.intercepter.response.use(
-//     response => {
-//         //요청 성공시 특정 작업
-//         return response;
-//     },
-//     error => {
-//         //요청 실패 시 특정 작업
-//         return Promise.reject(error);
-//     }
-// )
+  // 인터셉터 설정
+  axios.intercepter.response.use(\
+    response => {
+      // 요청 성공 시 특정 작업 수행
+      return response;
+    }, 
+    error => {
+      // 요청 실패 시 특정 작업 수행
+      return Promise.reject(error);
+    }
+  })  
+*/
 
 export default client;

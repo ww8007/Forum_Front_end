@@ -52,9 +52,7 @@ export function* authSaga() {
 const initialState = {
   register: {
     username: '',
-
     email: '',
-
     password: '',
     passwordConfirm: '',
   },

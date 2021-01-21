@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeField, initializeForm, register } from '../../modules/auth';
 import AuthForm from '../../components/auth/AuthForm';
-// import { check } from '../../modules/user';
+import { check } from '../../modules/user';
 import { withRouter } from 'react-router-dom';
 
 const RegisterForm = ({ history }) => {
@@ -44,7 +44,7 @@ const RegisterForm = ({ history }) => {
       );
       return;
     }
-    dispatch(register({ username, email, password }));
+    dispatch(register({ username, password }));
   };
 
   // 컴포넌트가 처음 렌더링 될 때 form 을 초기화함
@@ -55,8 +55,6 @@ const RegisterForm = ({ history }) => {
   // 회원가입 성공 / 실패 처리
   useEffect(() => {
     if (authError) {
-      console.log(authError);
-      console.log(authError.response);
       // 계정명이 이미 존재할 때
       if (authError.response.status === 409) {
         setError('이미 존재하는 계정명입니다.');
@@ -70,10 +68,9 @@ const RegisterForm = ({ history }) => {
     if (auth) {
       console.log('회원가입 성공');
       console.log(auth);
-      // dispatch(check());
-      history.push('/'); // 홈 화면으로 이동
+      dispatch(check());
     }
-  }, [auth, authError, history]);
+  }, [auth, authError, dispatch]);
 
   // user 값이 잘 설정되었는지 확인
   useEffect(() => {

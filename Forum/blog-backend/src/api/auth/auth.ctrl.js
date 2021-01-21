@@ -12,6 +12,7 @@ export const register = async (ctx) => {
   // Request Body 검증하기
   const schema = Joi.object().keys({
     username: Joi.string().alphanum().min(3).max(20).required(),
+    email: Joi.string().alphanum().min(3).max(20).required(),
     password: Joi.string().required(),
   });
   const result = Joi.validate(ctx.request.body, schema);
@@ -29,7 +30,11 @@ export const register = async (ctx) => {
       ctx.status = 409; // Conflict
       return;
     }
-
+    const exists2 = await User.findByUseremail(email);
+    if (exists2) {
+      ctx.status = 409; // Conflict
+      return;
+    }
     const user = new User({
       username,
       email,
